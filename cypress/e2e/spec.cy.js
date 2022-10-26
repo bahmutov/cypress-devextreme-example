@@ -14,6 +14,7 @@ it('selects the state', () => {
     .should('be.visible')
     .contains('[role=option]', 'MA')
     .scrollIntoView()
+    .wait(1000, { log: false })
     .click()
   // the input field now has the value "MA"
   cy.get('input[name=State]').should('have.value', 'MA')
